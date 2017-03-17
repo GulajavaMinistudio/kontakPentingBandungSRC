@@ -43,12 +43,16 @@
 
     </div>
 
+    <!--progressbar-->
+    <div *ngIf="isLoadingBar" class="progress-line"></div>
+
   </nav>
 
   <!--routing untuk SPA-->
   <section>
     <router-outlet></router-outlet>
   </section>
+
 </div>
 
 </body>

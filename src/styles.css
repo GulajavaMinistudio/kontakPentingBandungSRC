@@ -143,7 +143,53 @@ html, body {
 }
 
 
+/*progress bar*/
+.progress-line, .progress-line:before {
+  height: 2px;
+  width: 100%;
+  margin: 0;
+}
+.progress-line {
+  background-color: transparent;
+  display: -webkit-flex;
+  display: flex;
+}
+.progress-line:before {
+  background-color: #e5f43f;
+  content: '';
+  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
 
+/*progress line loading awal halaman*/
+.progress-line-load, .progress-line-load:before {
+  height: 3px;
+  width: 100%;
+  margin: 0;
+}
+.progress-line-load {
+  background-color: transparent;
+  display: -webkit-flex;
+  display: flex;
+}
+.progress-line-load:before {
+  background-color: #DD356E;
+  content: '';
+  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+
+@-webkit-keyframes running-progress {
+  0% { margin-left: 0; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
+@keyframes running-progress {
+  0% { margin-left: 0; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
 
 
 
