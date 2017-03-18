@@ -10,12 +10,8 @@ import {StoreserviceService} from "../services/storeservice.service";
 })
 export class KontakdaruratComponent implements OnInit, OnDestroy {
 
-
   private search_katakunci: string = "";
-
-
   private listDataKontak: Kontak[] = [];
-
 
   constructor(private httpserv: HttpservicesService,
               private storeDatas: StoreserviceService) {
@@ -34,7 +30,7 @@ export class KontakdaruratComponent implements OnInit, OnDestroy {
   cekDataKontakStore(): void {
 
     let listDataStore = this.storeDatas.getStoreListKontakDarurat();
-    if (listDataStore.length == 0 || listDataStore === undefined || listDataStore === null) {
+    if (listDataStore.length === 0 || listDataStore === undefined || listDataStore === null) {
 
       this.getDataKontakInternet();
     }

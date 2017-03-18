@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TentangAppComponent } from './tentang-app.component';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {TentangAppComponent} from "./tentang-app.component";
 
 describe('TentangAppComponent', () => {
   let component: TentangAppComponent;
@@ -8,9 +7,9 @@ describe('TentangAppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TentangAppComponent ]
+      declarations: [TentangAppComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
