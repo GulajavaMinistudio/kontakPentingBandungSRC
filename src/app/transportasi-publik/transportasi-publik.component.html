@@ -7,7 +7,7 @@
 
       <div class="container" id="main">
 
-        <span>
+        <span class="font-settings-droid">
           Halaman yang berisi daftar nomor telepon pemesanan angkutan umum yang berada di kota Bandung dan sekitarnya. Gunakan kotak pencarian
           di bawah ini untuk melakukan pencarian dengan cepat.
         </span>
@@ -20,7 +20,7 @@
               <div class="lebar-input-search">
                 <label for="form_pencarian">Kotak Pencarian</label>
                 <input type="text" class="form-control" id="form_pencarian" name="input_form_pencarian"
-                       placeholder="Kata kunci nama kontak telepon">
+                       placeholder="Kata kunci nama kontak telepon" [(ngModel)]="search_katakunci">
               </div>
             </form>
           </div>
@@ -35,19 +35,19 @@
         <!--daftar kontak transportasi dalam list-->
         <ul class="list-unstyled" id="list-kontak">
 
-          <li>
+          <li *ngFor="let itemkontak of listDataKontak | filterSearchKontak : search_katakunci">
             <div class="list-item-kontak-namenumber">
-              <div class="circle-app-name">
+              <div class="circle-app-name-purple">
               </div>
             </div>
 
             <div class="list-item-kontak-namenumber">
               <span class="list-item-kontak-span-title">
-                Travel Cipaganti
+                {{itemkontak.nama}}
               </span>
               <br>
               <span class="list-item-kontak-span-subtitle">
-                Telp : 022 2551 198
+                Telp : {{itemkontak.telepon}}
               </span>
             </div>
 

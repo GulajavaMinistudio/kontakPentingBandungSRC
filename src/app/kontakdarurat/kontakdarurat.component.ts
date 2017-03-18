@@ -2,7 +2,6 @@ import {Component, OnInit, OnDestroy} from "@angular/core";
 import {HttpservicesService} from "../services/httpservices.service";
 import {Kontak} from "../dataclass/kontak-class";
 import {StoreserviceService} from "../services/storeservice.service";
-// import {isUndefined} from "util";
 
 @Component({
   selector: 'app-kontakdarurat',
@@ -11,23 +10,19 @@ import {StoreserviceService} from "../services/storeservice.service";
 })
 export class KontakdaruratComponent implements OnInit, OnDestroy {
 
-
   private search_katakunci: string = "";
-  private isLoadingData: boolean = false;
-
   private listDataKontak: Kontak[] = [];
-
 
   constructor(private httpserv: HttpservicesService,
               private storeDatas: StoreserviceService) {
   }
 
   ngOnInit() {
-
     this.cekDataKontakStore();
   }
 
   ngOnDestroy(): void {
+
   }
 
   //cek status data yang tersimpan di store data sementara
@@ -35,7 +30,7 @@ export class KontakdaruratComponent implements OnInit, OnDestroy {
   cekDataKontakStore(): void {
 
     let listDataStore = this.storeDatas.getStoreListKontakDarurat();
-    if (listDataStore.length == 0 || listDataStore === undefined || listDataStore === null) {
+    if (listDataStore.length === 0 || listDataStore === undefined || listDataStore === null) {
 
       this.getDataKontakInternet();
     }
@@ -64,22 +59,10 @@ export class KontakdaruratComponent implements OnInit, OnDestroy {
           else {
             this.listDataKontak = [];
           }
-
-          //hentikan refresh bar
-
+        },
+        (error) => {
+          console.log(error);
         }
       )
   }
-
-  //tampilkan refresh bar
-  startProgressBar(): void {
-
-  }
-
-
-  stopProgressBar(): void {
-
-  }
-
-
 }

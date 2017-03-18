@@ -32,6 +32,8 @@
 .navbar-default .navbar-brand {
   color: #dcdcdc;
   font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 11pt;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -44,6 +46,8 @@
 .navbar-default .navbar-nav > li > a {
   color: #dcdcdc;
   font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 11pt;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -121,3 +125,4 @@ body {
   padding-top: 70px;
   background: #f1f4f9;
 }
+

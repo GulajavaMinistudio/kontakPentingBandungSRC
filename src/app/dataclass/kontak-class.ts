@@ -4,8 +4,8 @@
 
 export class Kontak {
 
-  public nama : string;
-  public telepon : string;
+  public nama: string;
+  public telepon: string;
 
   constructor(nama: string, telepon: string) {
     this.nama = nama;
