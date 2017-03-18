@@ -19,6 +19,17 @@ html, body {
   background: #f1f4f9;
 }
 
+.font-settings {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 12pt;
+}
+
+.font-settings-droid {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 11pt;
+}
+
+
 /* NAVBAR */
 
 /*nav{*/
@@ -115,7 +126,7 @@ html, body {
   width: 100%;
   font-weight: bold;
   font-size: 11pt;
-  font-family: Helvetica, sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .list-item-kontak-span-subtitle {
@@ -137,6 +148,36 @@ html, body {
   height: 25px;
   margin-right: 15px;
   background: #EA5455;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.circle-app-name-green {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  background: #3ac569;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.circle-app-name-orange {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  background: #F68657;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.circle-app-name-purple {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  background: #e94e77;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
